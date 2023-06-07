@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /*
+      MAIN-COLOR: #087f5b
+      GRAY-COLOR43a40
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        font-family: sans-serif;
+      }
+
+      nav,
+      menu,
+      section,
+      main,
+      aside {
+        padding-top: 24px;
+      }
+
+      nav {
+        background-color: #343a40;
+        color: #ffff;
+        grid-row: 1/-1;
+      }
+      menu {
+        padding: 0 25px;
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        background-color: #7048e8;
+        grid-column: 2/-1;
+      }
+      section {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        background-color: #e9ecef;
+        overflow: scroll;
+      }
+      main {
+        background-color: #ffff;
+      }
+      aside {
+        background-color: #e9ecef;
+      }
+
+      .actions {
+        color: #ffff;
+        background-color: #5f3dc4;
+      }
+
+      .email {
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #abd5bd;
+        flex-shrink: 0;
+      }
+
+      .email:last-child {
+        margin-bottom: 0;
+      }
+
+      .major-actions,
+      .minor-action {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .minor-action .actions {
+        background-color: #c92a2a;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+    <title>App Layout</title>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <div class="major-actions">
+        <button class="btn actions">New</button>
+        <button class="btn actions">Reply</button>
+        <button class="btn actions">Forward</button>
+        <button class="btn actions">Mark Unread</button>
+      </div>
+
+      <div class="minor-action">
+        <button class="btn actions">Trash</button>
+      </div>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+      <div class="email">Email 1</div>
+    </section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+  </body>
+</html>
